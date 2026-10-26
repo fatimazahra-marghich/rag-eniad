@@ -1,0 +1,22 @@
+[
+  {"id": 1, "type": "answerable", "question": "Combien de séances de TP manquées dans un même module compromettent les chances de validation ?", "must_contain": ["plus d'une|une seule|deux séances|2 séances"], "source": "reglement_eniad.pdf", "pages": [2]},
+  {"id": 2, "type": "answerable", "question": "Dans quel délai faut-il justifier une absence ?", "must_contain": ["48"], "source": "reglement_eniad.pdf", "pages": [1, 2]},
+  {"id": 3, "type": "answerable", "question": "Quelle moyenne faut-il pour valider un module en cycle ingénieur ?", "must_contain": ["12/20"], "source": "reglement_eniad.pdf", "pages": [3]},
+  {"id": 4, "type": "answerable", "question": "Combien d'absences non justifiées dans un module entraînent l'annulation du module ?", "must_contain": ["cinq|5"], "source": "reglement_eniad.pdf", "pages": [2]},
+  {"id": 5, "type": "answerable", "question": "Combien d'années durent les études à l'ENIAD ?", "must_contain": ["cinq|5"], "source": "reglement_eniad.pdf", "pages": [1]},
+  {"id": 6, "type": "answerable", "question": "Peut-on utiliser un téléphone portable pendant un examen ?", "must_contain": ["interdit|interdiction"], "source": "reglement_eniad.pdf", "pages": [4]},
+  {"id": 7, "type": "answerable", "question": "Jusqu'à quel retard un élève peut-il encore entrer dans la salle d'examen ?", "must_contain": ["tiers"], "source": "reglement_eniad.pdf", "pages": [4]},
+  {"id": 8, "type": "answerable", "question": "Combien de temps dure le Daily Scrum ?", "must_contain": ["15"], "source": "agile_ch2.pdf", "pages": [32]},
+  {"id": 9, "type": "answerable", "question": "Quelle est la durée d'un sprint ?", "must_contain": ["2", "4"], "source": "agile_ch2.pdf", "pages": [31]},
+  {"id": 10, "type": "answerable", "question": "Quel est le rôle du Scrum Master ?", "must_contain": ["coach|accompagne|respect|obstacles"], "source": "agile_ch2.pdf", "pages": [28, 29]},
+  {"id": 11, "type": "answerable", "question": "Combien de membres compte idéalement l'équipe de développement Scrum ?", "must_contain": ["6", "10"], "source": "agile_ch2.pdf", "pages": [29]},
+  {"id": 12, "type": "answerable", "question": "Qu'est-ce que le Grid Search ?", "must_contain": ["combinaisons|grille"], "source": "dl_ch3_hyperparametres.pdf", "pages": [37, 38]},
+  {"id": 13, "type": "answerable", "question": "Qu'est-ce que le Random Search ?", "must_contain": ["aléatoire"], "source": "dl_ch3_hyperparametres.pdf", "pages": [40]},
+  {"id": 14, "type": "answerable", "question": "Qui a défini le perceptron en 1957 ?", "must_contain": ["Rosenblatt"], "source": "dl_ch1_perceptron.pdf", "pages": [15, 16]},
+  {"id": 15, "type": "answerable", "question": "Pourquoi le perceptron échoue-t-il sur le problème XOR ?", "must_contain": ["linéaire"], "source": "dl_ch1_perceptron.pdf", "pages": [27, 28]},
+  {"id": 16, "type": "unanswerable", "question": "Quelle est la capitale de l'Australie ?"},
+  {"id": 17, "type": "unanswerable", "question": "Quel est le prix du repas à la cantine de l'ENIAD ?"},
+  {"id": 18, "type": "unanswerable", "question": "Quel est le montant des frais d'inscription à l'ENIAD ?"},
+  {"id": 19, "type": "unanswerable", "question": "Comment fonctionne une couche de convolution dans un CNN ?"},
+  {"id": 20, "type": "unanswerable", "question": "Quelle bibliothèque Python faut-il utiliser pour entraîner un réseau de neurones ?"}
+]

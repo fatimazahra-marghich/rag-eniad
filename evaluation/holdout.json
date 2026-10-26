@@ -1,0 +1,12 @@
+[
+  {"id": 21, "type": "answerable", "question": "Quand le choix des filières du cycle ingénieur est-il arrêté ?", "must_contain": ["deuxième année|2ème année"], "source": "reglement_eniad.pdf", "pages": [1]},
+  {"id": 22, "type": "answerable", "question": "À combien de rattrapages un élève a-t-il droit par module ?", "must_contain": ["un seul|une seule|un unique"], "source": "reglement_eniad.pdf", "pages": [4]},
+  {"id": 23, "type": "answerable", "question": "Que gère le Product Owner dans Scrum ?", "must_contain": ["priorit|client"], "source": "agile_ch2.pdf", "pages": [28, 29]},
+  {"id": 24, "type": "answerable", "question": "Que se passe-t-il pendant le passage en arrière de la rétropropagation ?", "must_contain": ["poids"], "source": "dl_ch2_retropropagation.pdf", "pages": [7, 8, 9]},
+  {"id": 25, "type": "answerable", "question": "Quelles fonctions d'activation sont présentées dans le cours sur le perceptron ?", "must_contain": ["sigmo", "relu"], "source": "dl_ch1_perceptron.pdf", "pages": [23]},
+  {"id": 26, "type": "unanswerable", "question": "Quel est le salaire d'un ingénieur IA au Maroc ?"},
+  {"id": 27, "type": "unanswerable", "question": "Qu'est-ce que le protocole HTTP ?"},
+  {"id": 28, "type": "unanswerable", "question": "Comment faire un tajine de poulet ?"},
+  {"id": 29, "type": "unanswerable", "question": "Quelles sont les dates précises des examens du semestre prochain ?"},
+  {"id": 30, "type": "unanswerable", "question": "Dans quel langage de programmation implémente-t-on un perceptron ?"}
+]

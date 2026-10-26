@@ -13,7 +13,7 @@ load_dotenv()
 
 LLM_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 TOP_K = 4
-SCORE_THRESHOLD = 0.85   # à calibrer avec calibrate.py
+SCORE_THRESHOLD = float(os.getenv("SCORE_THRESHOLD", "0.82"))   # calibré sur 13 questions (NOTES.md)
 NO_ANSWER = "Je ne sais pas : cette information ne figure pas dans les documents."
 
 SYSTEM_PROMPT = (

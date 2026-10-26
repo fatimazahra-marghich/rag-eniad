@@ -1,0 +1,488 @@
+{
+  "summary": {
+    "total": 20,
+    "passed": 20,
+    "answerable_total": 15,
+    "answerable_passed": 15,
+    "unanswerable_total": 5,
+    "unanswerable_passed": 5,
+    "retrieval_ok": 15
+  },
+  "rows": [
+    {
+      "id": 1,
+      "question": "Combien de séances de TP manquées dans un même module compromettent les chances de validation ?",
+      "type": "answerable",
+      "answer": "Deux séances de TP manquées dans le même module (c’est‑à‑dire plus d’une séance) compromettent les chances de validation [1].",
+      "answered": true,
+      "best_score": 0.878,
+      "sources": [
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 2,
+          "score": 0.878
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 2,
+      "question": "Dans quel délai faut-il justifier une absence ?",
+      "type": "answerable",
+      "answer": "Le délai pour justifier une absence est de **48 heures** à compter de la date de l’absence【1†L2-L3】【4†L3-L4】.",
+      "answered": true,
+      "best_score": 0.874,
+      "sources": [
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 2,
+          "score": 0.874
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 2,
+          "score": 0.864
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 2,
+          "score": 0.86
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 1,
+          "score": 0.848
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 3,
+      "question": "Quelle moyenne faut-il pour valider un module en cycle ingénieur ?",
+      "type": "answerable",
+      "answer": "Pour valider un module :\n\n- En cycle préparatoire (CP) : il faut une moyenne générale d’au moins **10/20** ;  \n- En cycle ingénieur (CI) : il faut une moyenne générale d’au moins **12/20** . [1]",
+      "answered": true,
+      "best_score": 0.899,
+      "sources": [
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 3,
+          "score": 0.899
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 4,
+      "question": "Combien d'absences non justifiées dans un module entraînent l'annulation du module ?",
+      "type": "answerable",
+      "answer": "Cinq absences non justifiées dans un module entraînent l’annulation du module. [1]",
+      "answered": true,
+      "best_score": 0.872,
+      "sources": [
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 2,
+          "score": 0.872
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 5,
+      "question": "Combien d'années durent les études à l'ENIAD ?",
+      "type": "answerable",
+      "answer": "Les études à l’ENIAD durent cinq années【1】.",
+      "answered": true,
+      "best_score": 0.894,
+      "sources": [
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 1,
+          "score": 0.894
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 1,
+          "score": 0.868
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 1,
+          "score": 0.866
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 1,
+          "score": 0.847
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 6,
+      "question": "Peut-on utiliser un téléphone portable pendant un examen ?",
+      "type": "answerable",
+      "answer": "Non, l’utilisation d’un téléphone portable pendant un examen est interdite. [1]",
+      "answered": true,
+      "best_score": 0.848,
+      "sources": [
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 4,
+          "score": 0.848
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 7,
+      "question": "Jusqu'à quel retard un élève peut-il encore entrer dans la salle d'examen ?",
+      "type": "answerable",
+      "answer": "Un élève ingénieur peut encore entrer dans la salle d’examen tant que son retard est **inférieur au tiers de la durée de l’épreuve** à compter de la distribution des sujets【1】.",
+      "answered": true,
+      "best_score": 0.882,
+      "sources": [
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 4,
+          "score": 0.882
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 4,
+          "score": 0.858
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 4,
+          "score": 0.856
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 2,
+          "score": 0.853
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 8,
+      "question": "Combien de temps dure le Daily Scrum ?",
+      "type": "answerable",
+      "answer": "Le Daily Scrum dure 15 minutes. 【1†L3-L4】【2†L4-L5】",
+      "answered": true,
+      "best_score": 0.898,
+      "sources": [
+        {
+          "source": "agile_ch2.pdf",
+          "page": 32,
+          "score": 0.898
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 26,
+          "score": 0.892
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 23,
+          "score": 0.887
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 31,
+          "score": 0.866
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 9,
+      "question": "Quelle est la durée d'un sprint ?",
+      "type": "answerable",
+      "answer": "La durée d’un sprint est généralement de **2 à 4 semaines**【1】, 【4】.",
+      "answered": true,
+      "best_score": 0.881,
+      "sources": [
+        {
+          "source": "agile_ch2.pdf",
+          "page": 23,
+          "score": 0.881
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 26,
+          "score": 0.87
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 32,
+          "score": 0.87
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 31,
+          "score": 0.868
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 10,
+      "question": "Quel est le rôle du Scrum Master ?",
+      "type": "answerable",
+      "answer": "Le Scrum Master accompagne l’équipe et veille au respect du Scrum ; il agit comme coach en s’assurant que les principes et valeurs Scrum sont respectés, coordonne l’équipe, facilite la communication et supprime les obstacles pour améliorer la productivité【1†L2-L3】【2†L2-L4】",
+      "answered": true,
+      "best_score": 0.869,
+      "sources": [
+        {
+          "source": "agile_ch2.pdf",
+          "page": 28,
+          "score": 0.869
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 29,
+          "score": 0.866
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 24,
+          "score": 0.861
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 25,
+          "score": 0.846
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 11,
+      "question": "Combien de membres compte idéalement l'équipe de développement Scrum ?",
+      "type": "answerable",
+      "answer": "Idéalement, l’équipe de développement Scrum compte entre 6 et 10 membres [1].",
+      "answered": true,
+      "best_score": 0.871,
+      "sources": [
+        {
+          "source": "agile_ch2.pdf",
+          "page": 29,
+          "score": 0.871
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 12,
+      "question": "Qu'est-ce que le Grid Search ?",
+      "type": "answerable",
+      "answer": "Le Grid Search est une méthode de recherche d’hyperparamètres qui consiste à tester toutes les combinaisons possibles d’hyperparamètres afin de trouver la meilleure performance d’un modèle【1】【3】.",
+      "answered": true,
+      "best_score": 0.905,
+      "sources": [
+        {
+          "source": "dl_ch3_hyperparametres.pdf",
+          "page": 38,
+          "score": 0.905
+        },
+        {
+          "source": "dl_ch3_hyperparametres.pdf",
+          "page": 40,
+          "score": 0.899
+        },
+        {
+          "source": "dl_ch3_hyperparametres.pdf",
+          "page": 37,
+          "score": 0.883
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 24,
+          "score": 0.821
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 13,
+      "question": "Qu'est-ce que le Random Search ?",
+      "type": "answerable",
+      "answer": "Le Random Search est une méthode qui consiste à choisir aléatoirement des combinaisons d’hyperparamètres dans un espace défini (une “grille”), puis à entraîner et évaluer le modèle sur ces choix【1】.",
+      "answered": true,
+      "best_score": 0.895,
+      "sources": [
+        {
+          "source": "dl_ch3_hyperparametres.pdf",
+          "page": 40,
+          "score": 0.895
+        },
+        {
+          "source": "dl_ch3_hyperparametres.pdf",
+          "page": 38,
+          "score": 0.834
+        },
+        {
+          "source": "dl_ch3_hyperparametres.pdf",
+          "page": 37,
+          "score": 0.83
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 14,
+      "question": "Qui a défini le perceptron en 1957 ?",
+      "type": "answerable",
+      "answer": "Rosenblatt a défini le perceptron en 1957. 【[1]】",
+      "answered": true,
+      "best_score": 0.83,
+      "sources": [
+        {
+          "source": "dl_ch1_perceptron.pdf",
+          "page": 16,
+          "score": 0.83
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 15,
+      "question": "Pourquoi le perceptron échoue-t-il sur le problème XOR ?",
+      "type": "answerable",
+      "answer": "Le perceptron ne peut exprimer que des frontières de décision linéaires, alors que la frontière optimale du problème XOR est non‑linéaire. Ainsi, le modèle à une seule couche ne parvient pas à séparer les deux classes du XOR, ce qui conduit à son échec sur ce problème [2]. Cette limitation a été mise en évidence par le problème du XOR, qui a montré que le perceptron de Rosenblatt ne pouvait pas résoudre des problèmes non linéaires [1].",
+      "answered": true,
+      "best_score": 0.905,
+      "sources": [
+        {
+          "source": "dl_ch1_perceptron.pdf",
+          "page": 28,
+          "score": 0.905
+        },
+        {
+          "source": "dl_ch1_perceptron.pdf",
+          "page": 27,
+          "score": 0.89
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 16,
+      "question": "Quelle est la capitale de l'Australie ?",
+      "type": "unanswerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.752,
+      "sources": [],
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 17,
+      "question": "Quel est le prix du repas à la cantine de l'ENIAD ?",
+      "type": "unanswerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.832,
+      "sources": [],
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 18,
+      "question": "Quel est le montant des frais d'inscription à l'ENIAD ?",
+      "type": "unanswerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.874,
+      "sources": [],
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 19,
+      "question": "Comment fonctionne une couche de convolution dans un CNN ?",
+      "type": "unanswerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.845,
+      "sources": [],
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 20,
+      "question": "Quelle bibliothèque Python faut-il utiliser pour entraîner un réseau de neurones ?",
+      "type": "unanswerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.852,
+      "sources": [],
+      "passed": true,
+      "reason": "ok"
+    }
+  ]
+}

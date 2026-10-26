@@ -1,0 +1,186 @@
+{
+  "summary": {
+    "total": 10,
+    "passed": 8,
+    "answerable_total": 5,
+    "answerable_passed": 3,
+    "unanswerable_total": 5,
+    "unanswerable_passed": 5,
+    "retrieval_ok": 4
+  },
+  "rows": [
+    {
+      "id": 21,
+      "question": "Quand le choix des filières du cycle ingénieur est-il arrêté ?",
+      "type": "answerable",
+      "answer": "Le choix des filières du cycle ingénieur est arrêté à la fin de la deuxième année du cycle préparatoire intégré【1】.",
+      "answered": true,
+      "best_score": 0.89,
+      "sources": [
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 1,
+          "score": 0.89
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 4,
+          "score": 0.867
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 1,
+          "score": 0.86
+        },
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 1,
+          "score": 0.856
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 22,
+      "question": "À combien de rattrapages un élève a-t-il droit par module ?",
+      "type": "answerable",
+      "answer": "Un élève n’a droit qu’à **un seul rattrapage par module** [2].",
+      "answered": true,
+      "best_score": 0.88,
+      "sources": [
+        {
+          "source": "reglement_eniad.pdf",
+          "page": 4,
+          "score": 0.875
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 23,
+      "question": "Que gère le Product Owner dans Scrum ?",
+      "type": "answerable",
+      "answer": "Le Product Owner gère les priorités et le contenu du produit【1】.",
+      "answered": true,
+      "best_score": 0.901,
+      "sources": [
+        {
+          "source": "agile_ch2.pdf",
+          "page": 28,
+          "score": 0.901
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 29,
+          "score": 0.887
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 31,
+          "score": 0.872
+        },
+        {
+          "source": "agile_ch2.pdf",
+          "page": 24,
+          "score": 0.855
+        }
+      ],
+      "retrieval_ok": true,
+      "answer_ok": true,
+      "source_ok": true,
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 24,
+      "question": "Que se passe-t-il pendant le passage en arrière de la rétropropagation ?",
+      "type": "answerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.859,
+      "sources": [],
+      "retrieval_ok": true,
+      "answer_ok": false,
+      "source_ok": false,
+      "passed": false,
+      "reason": "refus à tort (seuil ou LLM)"
+    },
+    {
+      "id": 25,
+      "question": "Quelles fonctions d'activation sont présentées dans le cours sur le perceptron ?",
+      "type": "answerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.88,
+      "sources": [],
+      "retrieval_ok": false,
+      "answer_ok": false,
+      "source_ok": false,
+      "passed": false,
+      "reason": "recherche : la bonne page n'est pas dans le top-k"
+    },
+    {
+      "id": 26,
+      "question": "Quel est le salaire d'un ingénieur IA au Maroc ?",
+      "type": "unanswerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.825,
+      "sources": [],
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 27,
+      "question": "Qu'est-ce que le protocole HTTP ?",
+      "type": "unanswerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.821,
+      "sources": [],
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 28,
+      "question": "Comment faire un tajine de poulet ?",
+      "type": "unanswerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.814,
+      "sources": [],
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 29,
+      "question": "Quelles sont les dates précises des examens du semestre prochain ?",
+      "type": "unanswerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.854,
+      "sources": [],
+      "passed": true,
+      "reason": "ok"
+    },
+    {
+      "id": 30,
+      "question": "Dans quel langage de programmation implémente-t-on un perceptron ?",
+      "type": "unanswerable",
+      "answer": "Je ne sais pas : cette information ne figure pas dans les documents.",
+      "answered": false,
+      "best_score": 0.857,
+      "sources": [],
+      "passed": true,
+      "reason": "ok"
+    }
+  ]
+}
