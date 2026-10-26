@@ -8,17 +8,23 @@
 - Chunks de titres seuls (diapositives dont le contenu est une image) : filtrés sous 80 caractères.
 - Limites connues : tableaux aplatis (perte du lien entre colonnes), schémas et formules en image non extraits, pas d'OCR.
 - À vérifier au jour 4 : taille 800 / chevauchement 150, via le taux de réussite sur les 20 questions.
-## jour 2
-La question sur les absences en TP est à vérifier. Ton top 3 contient des passages sur les absences, mais je ne vois pas la règle exacte (« l’absence à plus d’une séance de TP compromet la validation »). Elle est peut-être dans un autre chunk que le top 3. Crée check.py à la racine, lance python check.py, puis colle-moi le résultat :
-python
-from src.search import search
 
-hits = search("Combien d'absences en TP compromettent la validation d'un module ?", k=10)
-for i, h in enumerate(hits, 1):
-    found = "plus d" in h["text"] and "Travaux Pratiques" in h["text"]
-    print(i, h["score"], "p.", h["page"], "<-- règle TP" if found else "")
+## Jour 2 : embeddings et base vectorielle
 
-Ça nous dit si la règle est au rang 1, 2, 3… ou absente. C’est le même type de test que fera ton évaluation du jour 4.
+- Modèle : intfloat/multilingual-e5-small (384 dimensions, contexte 512 tokens, multilingue). J'ai écarté paraphrase-multilingual-MiniLM, qui tronque à 128 tokens, et bge-m3, trop lourd pour le niveau gratuit de Cloud Run.
+- Base vectorielle : Chroma (embarquée, sans serveur), distance cosinus, score = 1 - distance. pgvector aurait demandé un Postgres payant.
+- Préfixes « query: » et « passage: » exigés par le modèle e5.
+- Scores observés : questions dans le corpus 0.87 à 0.90, question hors corpus 0.75. Les scores e5 sont comprimés (0.7 à 1.0) : le seuil doit être calibré, pas deviné.
+- Défaut corrigé : accents LaTeX séparés de la lettre dans un cours (« ´eviter », « probl`eme »), réparés dans clean().
+- Constats à tester au jour 4 : le nombre de résultats k compte (5 événements Scrum mais k=3), et une page de titre peut remonter comme chunk de bruit (score 0.853 sur la rétropropagation).
+- À vérifier : la règle « plus d'une absence en TP compromet la validation » est-elle dans le top 4 ? (résultat de check.py : à compléter)
 
-Le nombre de résultats k compte. Pour « Quels sont les événements Scrum ? », il y a 5 événements mais k=3 en renvoie 3. Le choix de k sera à tester.
-Un chunk de bruit apparaît au rang 3 de la rétropropagation : la page de titre (« Pr S. MHAMMEDI 2025-2026 Chapitre2… »). Il atteint 0.853 sans rien contenir d’utile. Les pages de titre pourront être filtrées plus tard si l’évaluation montre qu’elles gênent.
+## Jour 3 : RAG complet (Groq, sources, « je ne sais pas »)
+
+- Modèle : openai/gpt-oss-120b (les modèles Llama de Groq ont été arrêtés le 16 août 2026), configurable via la variable GROQ_MODEL.
+- Calibration du seuil sur 13 questions : dans le corpus 0.874 à 0.905, hors corpus 0.752 à 0.872.
+- Seuil provisoire 0.85 : bloque 5 questions hors sujet sur 6 avant tout appel au LLM.
+- La question sur les réseaux convolutifs (0.872) passe le seuil, mais le LLM refuse de répondre : le seuil seul ne suffit pas, d'où deux garde-fous (seuil de similarité + consigne du prompt).
+- Sources : seuls les passages réellement cités ([1], [2]...) sont affichés. Température 0 pour des réponses reproductibles.
+- Le prompt précise que les passages sont des données et non des instructions (protection contre l'injection de prompt).
+- À mesurer au jour 4 : refus à tort (seuil trop haut) et réponses inventées (seuil trop bas).
