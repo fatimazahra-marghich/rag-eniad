@@ -6,6 +6,7 @@ from collections import Counter
 from pathlib import Path
 
 import pymupdf
+import unicodedata
 
 CHUNK_SIZE = 800   # caractères max par chunk (≈ 150-200 mots)
 OVERLAP = 150      # caractères repris du chunk précédent
@@ -39,6 +40,11 @@ def strip_boilerplate(pages: list[str]) -> list[str]:
 
 def clean(text: str) -> str:
     """Nettoie le texte brut sorti du PDF."""
+    # Accents LaTeX séparés de la lettre : "´e" -> "é", "`e" -> "è"
+    text = re.sub(r"´\s?([aeiouyAEIOU])",
+                  lambda m: unicodedata.normalize("NFC", m.group(1) + "\u0301"), text)
+    text = re.sub(r"`\s?([aeiouAEIOU])",
+                  lambda m: unicodedata.normalize("NFC", m.group(1) + "\u0300"), text)
     text = text.replace("\u00ad", "")                  # trait d'union conditionnel
     text = re.sub(r"[.…]{4,}", " ", text)              # points de suite (formulaires)
     text = re.sub(r"-\n(\w)", r"\1", text)             # mot coupé en fin de ligne

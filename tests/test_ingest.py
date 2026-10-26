@@ -20,7 +20,7 @@ def test_overlap_between_consecutive_chunks():
     chunks = chunk_text(text, size=300, overlap=60)
     last_sentence = chunks[0].split(". ")[-1]
     assert last_sentence in chunks[1]
-    
+
 def test_strip_boilerplate_removes_header_and_page_numbers():
     contents = ["alpha", "bravo", "charlie", "delta", "echo", "foxtrot"]
     pages = [f"ENTETE ECOLE ENIAD Page {i} sur 6\n{word} propre\n{i}"
@@ -32,3 +32,6 @@ def test_strip_boilerplate_removes_header_and_page_numbers():
 
 def test_clean_removes_dot_leaders():
     assert clean("Nom : ………………………… Signature") == "Nom : Signature"
+
+def test_clean_fixes_detached_accents():
+    assert clean("´eviter le probl`eme") == "éviter le problème"
