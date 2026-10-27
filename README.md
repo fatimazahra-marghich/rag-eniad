@@ -1,4 +1,5 @@
 # Assistant RAG en français (ENIAD)
+![CI](https://github.com/fatimazahra-marghich/rag-eniad/actions/workflows/ci.yml/badge.svg)
 
 Application qui répond à des questions en français sur un ensemble de documents (règlement de l'ENIAD, cours d'Agile et de Deep Learning). Chaque réponse indique ses sources (fichier et page), et l'assistant répond « Je ne sais pas » quand l'information n'est pas dans les documents.
 

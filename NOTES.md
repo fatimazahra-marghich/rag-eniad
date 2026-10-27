@@ -53,3 +53,14 @@
 - Essai réel : « notes 11, 13, 12, module validé en CI ? » -> recherche du seuil (12/20) puis calcul de la moyenne (12.0) -> validé. « 15 % de 300 heures » -> 45 h avec la source. Question hors sujet -> « Je ne sais pas » après un seul appel de recherche.
 - Observation : l'agent a appelé la calculatrice avant la recherche dans un cas, malgré la consigne : l'ordre des outils est décidé par le LLM.
 - Limites : l'agent n'est pas évalué sur un jeu de questions, il est plus coûteux (plusieurs appels au LLM) et moins reproductible que /ask. Les citations du LLM ne sont pas toujours mot pour mot, seules les sources (fichier et page) sont fiables.
+## Jour 6 : Docker, docker-compose et CI
+
+- Image Docker : python:3.13-slim, PyTorch version CPU (sans elle, pip installe une trentaine de paquets NVIDIA inutiles), modèle d'embedding téléchargé à la construction, exécution avec un utilisateur non administrateur. Taille : 4,18 Go sur disque, 1,16 Go compressés.
+- Le port est lu dans la variable PORT (8080 par défaut), comme l'exige Cloud Run.
+- docker-compose : monte le dossier data/ local (index privé, jamais copié dans l'image) et passe la clé API via .env.
+- .dockerignore : exclut .env, data/, .git, tests et évaluation de l'image.
+- Tests d'hygiène : .env ignoré par git et par Docker, aucune clé gsk_ dans les fichiers du dépôt. 35 tests au total.
+- CI GitHub Actions : job tests (pytest, sans aucun secret car Groq est simulé) puis job docker (construction de l'image avec cache). Premier run vert en 5 min 34 s.
+- Incident 1 : le build local a échoué sur un « TLS handshake timeout » vers Docker Hub. Cause : réseau interne de Docker Desktop, pas le Dockerfile (curl depuis Windows fonctionnait). Résolu en redémarrant Docker Desktop.
+- Incident 2 : le fichier s'appelait « dockerfile » en minuscules. Sous Windows ça fonctionne, mais Linux (la CI) distingue la casse : renommé en « Dockerfile » avant le premier push.
+- Limite : les dépendances principales sont fixées mais pas leurs dépendances secondaires (pas de verrouillage complet).
