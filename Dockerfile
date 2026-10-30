@@ -17,14 +17,15 @@ RUN pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requir
 RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('intfloat/multilingual-e5-small')"
 ENV HF_HUB_OFFLINE=1
 
-# 3) Code, puis index construit dans l'image seulement si corpus/ contient des PDF.
+# 3) Code seulement : l'image ne contient aucun document.
+#    Les PDF sont montés dans /app/data/pdfs et indexés au premier démarrage (src/serve.py).
 COPY src/ src/
-COPY corpus/ data/pdfs/
-RUN if ls data/pdfs/*.pdf >/dev/null 2>&1; then python src/ingest.py && python -m src.embed; fi
 
 # 4) Exécution avec un utilisateur non administrateur.
-RUN useradd --create-home appuser && chown -R appuser /app /opt/hf-cache
+RUN useradd --create-home appuser \
+    && mkdir -p data/pdfs data/processed data/chroma \
+    && chown -R appuser /app /opt/hf-cache
 USER appuser
 
 EXPOSE 8080
-CMD ["sh", "-c", "exec uvicorn src.api:app --host 0.0.0.0 --port ${PORT:-8080}"]
+CMD ["python", "-m", "src.serve"]
