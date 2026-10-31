@@ -11,7 +11,7 @@
 
 ## Jour 2 : embeddings et base vectorielle
 
-- Modèle : intfloat/multilingual-e5-small (384 dimensions, contexte 512 tokens, multilingue). J'ai écarté paraphrase-multilingual-MiniLM, qui tronque à 128 tokens, et bge-m3, trop lourd pour le niveau gratuit de Cloud Run.
+- Modèle : intfloat/multilingual-e5-small (384 dimensions, contexte 512 tokens, multilingue). J'ai écarté paraphrase-multilingual-MiniLM, qui tronque à 128 tokens, et bge-m3, trop lourd pour un usage sur processeur sans carte graphique.
 - Base vectorielle : Chroma (embarquée, sans serveur), distance cosinus, score = 1 - distance. pgvector aurait demandé un Postgres payant.
 - Préfixes « query: » et « passage: » exigés par le modèle e5.
 - Scores observés : questions dans le corpus 0.87 à 0.90, question hors corpus 0.75. Les scores e5 sont comprimés (0.7 à 1.0) : le seuil doit être calibré, pas deviné.
@@ -56,7 +56,7 @@
 ## Jour 6 : Docker, docker-compose et CI
 
 - Image Docker : python:3.13-slim, PyTorch version CPU (sans elle, pip installe une trentaine de paquets NVIDIA inutiles), modèle d'embedding téléchargé à la construction, exécution avec un utilisateur non administrateur. Taille : 4,18 Go sur disque, 1,16 Go compressés.
-- Le port est lu dans la variable PORT (8080 par défaut), comme l'exige Cloud Run.
+- Le port est lu dans la variable PORT (8080 par défaut), ce qui permet de changer le port sans reconstruire l'image.
 - docker-compose : monte le dossier data/ local (index privé, jamais copié dans l'image) et passe la clé API via .env.
 - .dockerignore : exclut .env, data/, .git, tests et évaluation de l'image.
 - Tests d'hygiène : .env ignoré par git et par Docker, aucune clé gsk_ dans les fichiers du dépôt. 35 tests au total.
